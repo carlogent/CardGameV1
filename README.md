@@ -1,6 +1,6 @@
-Card Game System Documentation
+# Card Game System Documentation
 
-Keyconcepts:
+## Keyconcepts
 
 ### Cards
 The cards in the game are vessels for card effects, cards themselves dont have much logic beyond holding a list of effects.
