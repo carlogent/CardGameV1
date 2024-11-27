@@ -11,10 +11,10 @@ card effects are what drive the logic of the game, these are attached to cards a
 - **Activate**: this occurs when the conditional is met, a/multiple *Action/s* and a *ActivationEffectData* is created. The Action will set all required events and the ActivationEffectData will store 
 
 ### Actions
-...
+Actions are the smallest building block of things that can change the game, anything that can be done should be done through an action thus maintaining consistency. Effects can have many actions such as GainLifePoints Action and DestroyCard Action. Actions are the entities that create events, and make it easy and consistent to check if something can be done, and to the effect itself.
 
 ### Events
-events are objects that contain information about 1. when an action attempted/activated/resolved by using a sequence number and 2. information about the event itself such as a reference to the Action that created it or anything else. Events are contained within a *DuelEventData*.
+events are objects that contain information about 1. when an action attempted/activated/resolved by using a sequence number and 2. information about the event itself such as a reference to the Action that created it or anything else. Events of a related type are contained within a *DuelEventData*.
 
 Events are used by card effects to determine if something occured to which they can respond to. ex: a card that cares about a monster being destroyed would look in the OnDestroy event lists to check if a monster was just destroyed, also to perhaps check the reference to the monster if needed (perhaps can only activate if a certain type of monster was destroyed).
 
