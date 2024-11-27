@@ -19,9 +19,9 @@ events are objects that contain information about 1. when an action attempted/ac
 Events are used by card effects to determine if something occured to which they can respond to. ex: a card that cares about a monster being destroyed would look in the OnDestroy event lists to check if a monster was just destroyed, also to perhaps check the reference to the monster if needed (perhaps can only activate if a certain type of monster was destroyed).
 
 ##### event types:
-- **attempt**: this is used by an action when it wants to determine if it can even activate. this is used to determine things like if a card/effect should be highlighted that it can be played/activated. if this is negated then the effect will not even have an option to activate. ex: if an active effect states that no spell cards can be activated for rest of the turn, then that effect would always look in the 'EffectAction' event lists and specifically in the Attempt event list to negate any EffectActions attempts that reference a spell card.
-- **activate**: this is used by an action when it successfully 
-- **resolved**:
+- **Attempt**: this is used by an action when it wants to determine if it can even activate. this is used to determine things like if a card/effect should be highlighted that it can be played/activated. if this is negated then the effect will not even have an option to activate. ex: if an active effect states that no spell cards can be activated for rest of the turn, then that effect would always look in the 'EffectAction' event lists and specifically in the Attempt event list to negate any EffectActions attempts that reference a spell card.
+- **Activate**: this is used by an action when it successfully 
+- **Resolved**:
 
 ### GameDuelEvents
 This is just a list that congregates the three types of an events that an action must have (attempt event/activate event/resolved event) into their own lists.
