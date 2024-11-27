@@ -35,3 +35,5 @@ This is just a list that congregates the three types of an events that an action
 
 ### CardEffectActivationChain, CardEffectActivation and SequenceNumber
 The *CardEffectActivationChain* is a list that holds *CardEffectActivation(s)*. the *CardEffectActivation* data type that is created when a card effect successfully activates and it simply holds the *SequenceNumber* associated with the card effect activation aswell as a reference to the card effect. The CardEffect holds the specific activation being processed as the *ActivationEffectData* as mentioned before, this is in a dictionary with the key being the SequenceNumber, thus allowing the card effect to process the correct instance of the activation.
+
+- SequenceNumber: a number only used to show when something happened after or before another event. Can be used for multiple things so it is sparce thus cannot be used to determine if something happened right after another.
